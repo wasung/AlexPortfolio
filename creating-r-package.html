@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Guerilla Analytics | Portfolio DSFB</title>
-  <meta name="description" content="4 Guerilla Analytics | Portfolio DSFB" />
+  <title>8 Creating R package | Portfolio DSFB</title>
+  <meta name="description" content="8 Creating R package | Portfolio DSFB" />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Guerilla Analytics | Portfolio DSFB" />
+  <meta property="og:title" content="8 Creating R package | Portfolio DSFB" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Guerilla Analytics | Portfolio DSFB" />
+  <meta name="twitter:title" content="8 Creating R package | Portfolio DSFB" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="looking-ahead.html"/>
-<link rel="next" href="c.elegans-plate-experiment.html"/>
+<link rel="prev" href="relational-databases.html"/>
+<link rel="next" href="variant-analysis-tools.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -210,100 +210,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="guerilla-analytics" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">4</span> Guerilla Analytics<a href="guerilla-analytics.html#guerilla-analytics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Need to run the data at home through the pipe and clean up the folders still ( will use projecticum folders).
-## Assignment Overview</p>
-<p>In this assignment, the goal is to apply the <strong>Guerrilla Analytics</strong> framework to structure and document your project in a reproducible, collaborative, and future-proof way.</p>
-<p>The focus is on organizing both:
-- The <strong>DAUR-II</strong> project (RNAseq &amp; metagenomics analysis), and
-- The <strong>Projecticum</strong> (ongoing group project in DSFB2)</p>
-<hr />
-<div id="reorganize-your-daur-ii-project" class="section level3 hasAnchor" number="4.0.1">
-<h3><span class="header-section-number">4.0.1</span> 1. <strong>Reorganize Your DAUR-II Project</strong><a href="guerilla-analytics.html#reorganize-your-daur-ii-project" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Locate RStudio project folder used for the <strong>DAUR-II assignments</strong>.</li>
-<li>Download your work without the heavy data files</li>
-<li>Restructure the folder according to the Guerrilla Analytics folder principles</li>
-</ul>
-<div id="data-folders-should-contain" class="section level4 hasAnchor" number="4.0.1.1">
-<h4><span class="header-section-number">4.0.1.1</span> Data folders should contain:<a href="guerilla-analytics.html#data-folders-should-contain" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li>Only a <code>README.txt</code> file</li>
-<li>The <code>README.txt</code> should include:
-<ul>
-<li>Description of the dataset</li>
-<li>Data format</li>
-<li>Where the data is stored (path or location)</li>
-<li>Any preprocessing steps or notes</li>
-</ul></li>
-</ul>
-<hr />
-</div>
-</div>
-<div id="apply-to-your-rnaseq-and-metagenomics-work" class="section level3 hasAnchor" number="4.0.2">
-<h3><span class="header-section-number">4.0.2</span> 2. <strong>Apply to Your RNAseq and Metagenomics Work</strong><a href="guerilla-analytics.html#apply-to-your-rnaseq-and-metagenomics-work" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>You previously worked with:</p>
-<ul>
-<li><strong>3 RNAseq datasets</strong>
-<ul>
-<li>One of them was the <strong>exam project</strong></li>
-</ul></li>
-<li><strong>2 Metagenomics datasets</strong></li>
-</ul>
-<p>For each dataset:
-- Create a <strong>modular folder</strong> (e.g., <code>Data001</code>, <code>Data002</code>, etc.)
-- Add a <code>README.txt</code> inside each module
-- Add any import or checksum scripts to a <code>supporting/</code> subfolder</p>
-<hr />
-</div>
-<div id="use-the-fs-package-to-generate-a-folder-tree-screenshot" class="section level3 hasAnchor" number="4.0.3">
-<h3><span class="header-section-number">4.0.3</span> 3. <strong>Use the <code>{fs}</code> Package to Generate a Folder Tree Screenshot</strong><a href="guerilla-analytics.html#use-the-fs-package-to-generate-a-folder-tree-screenshot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To showcase your new project structure:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="guerilla-analytics.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(fs)</span>
-<span id="cb1-2"><a href="guerilla-analytics.html#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="guerilla-analytics.html#cb1-3" tabindex="-1"></a><span class="co"># Print your current directory tree (recursively)</span></span>
-<span id="cb1-4"><a href="guerilla-analytics.html#cb1-4" tabindex="-1"></a><span class="fu">dir_tree</span>(<span class="st">&quot;guerrilla-project&quot;</span>, <span class="at">recurse =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<pre><code>## guerrilla-project
-## ├── 0_admin
-## │   └── README.md
-## ├── 1_data_raw
-## │   ├── Data001
-## │   │   ├── 2024-01-01_cleanroom_counts.csv
-## │   │   ├── 2024-01-01_md5sum_cleanroom_counts.md5
-## │   │   ├── README.txt
-## │   │   ├── supporting
-## │   │   │   ├── cleanroom_import.R
-## │   │   │   └── md5sum.R
-## │   │   └── v01
-## │   │       ├── 2023-12-15_cleanroom_counts.csv
-## │   │       └── 2023-12-15_md5sum_cleanroom_counts.md5
-## │   ├── Data002
-## │   │   ├── experimental_design_notes.xlsx
-## │   │   └── README.txt
-## │   └── README.txt
-## ├── 2_data_clean
-## │   └── cleaned_data_sample.csv
-## ├── 3_analysis
-## │   ├── 01_import_and_clean.R
-## │   ├── 02_analysis.R
-## │   └── 03_visualizations.R
-## ├── 5_meta
-## │   ├── data_dictionary.md
-## │   └── variable_definitions.md
-## ├── 6_log
-## │   └── run_log.md
-## └── guerrilla_project.Rproj</code></pre>
+<div id="creating-r-package" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Creating R package<a href="creating-r-package.html#creating-r-package" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="looking-ahead.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="c.elegans-plate-experiment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="relational-databases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="variant-analysis-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
