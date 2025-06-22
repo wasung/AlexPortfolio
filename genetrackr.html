@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Relational databases | COVID-19 Report</title>
-  <meta name="description" content="8 Relational databases | COVID-19 Report" />
+  <title>9 genetrackR | COVID-19 Report</title>
+  <meta name="description" content="9 genetrackR | COVID-19 Report" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 Relational databases | COVID-19 Report" />
+  <meta property="og:title" content="9 genetrackR | COVID-19 Report" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Relational databases | COVID-19 Report" />
+  <meta name="twitter:title" content="9 genetrackR | COVID-19 Report" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="reproducable-research-part-1.html"/>
-<link rel="next" href="genetrackr.html"/>
+<link rel="prev" href="relational-databases.html"/>
+<link rel="next" href="parameterized-covid.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -241,9 +241,23 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="relational-databases" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">8</span> Relational databases<a href="relational-databases.html#relational-databases" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Passed the SQL assesment in Period D of academic year of 2023/2024</p>
+<div id="genetrackr" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> genetrackR<a href="genetrackr.html#genetrackr" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This package is designed to read, count, normalize, and visualize RNA-seq data at the gene level. It takes BAM files as input and leverages Bioconductor tools such as GenomicAlignments, GenomicFeatures, and SummarizedExperiment for efficient processing.</p>
+<p>The package includes four core functions:
+- countReads() – counts reads per gene from BAM files
+- normalizeCounts() – normalizes count matrices using CPM or TPM
+- plotGeneExpression() – visualizes gene expression per gene or per sample
+- exportResults() – exports tables or plots as CSV/PNG files</p>
+<p>The package features a vignette explaining how to use it with example RNA-seq data.</p>
+<p>The package is hosted on GitHub and can be installed via:
+devtools::install_github(“wasung/genetrackR”)</p>
+
+<p>#Optimising</p>
+<p>Environmental monitoring is an essential part of maintaining microbiological quality control in pharmaceutical and biotechnological manufacturing:contentReference<span index="4">oaicite:4</span>. Cleanroom studies have shown that the typical microflora found in such controlled environments originate primarily from human skin (Gram-positive cocci), with smaller contributions from environmental organisms (Gram-positive rods) and waterborne bacteria (Gram-negative rods):contentReference<span index="5">oaicite:5</span>. Tracking these flora over time is important – shifts in the types or numbers of microbes may signal deviations from normal conditions, such as the emergence of resistant strains or issues with cleaning procedures<span class="citation">(Sandle 2011)</span>. For instance, a five-year survey of a cell therapy production facility found that 97.8% of the isolates were Gram-positive bacteria (mostly Staphylococcus species), and no fungi were detected, indicating that personnel were the main source of contamination<span class="citation">(Morandi et al. 2024)</span>. This underscores that human operators can be significant contributors to cleanroom contamination, and rigorous personnel hygiene and monitoring are critical.</p>
+<p>Another challenge in contamination control is determining optimal conditions for detecting a broad range of microorganisms in environmental samples. Guidelines from different authorities vary in recommended incubation times, temperatures, and media for environmental monitoring plates, and no single consensus strategy exists<span class="citation">(Gordon et al. 2014)</span>. Studies have demonstrated that incubation at 30–35 °C on general media is ideal for recovering bacteria, whereas fungi (molds) are best recovered at cooler temperatures (20–25 °C on specialized fungal media)<span class="citation">(Gordon et al. 2014)</span>. Using only a high-temperature incubation can severely undercount molds, even if plates are subsequently moved to a lower temperature, so an optimized two-temperature or sequential incubation strategy may be necessary to recover both bacteria and fungi effectively.</p>
+<p>In addition to environmental microbes, <strong>Mycoplasma contamination</strong> is a serious risk in cell culture and advanced therapy products. Mycoplasmas are common yet insidious contaminants that lack cell walls, making them difficult to detect and eliminate<span class="citation">(Sandle 2022)</span>. They can alter cell physiology and growth characteristics, potentially compromising experimental results or the safety of cell therapy products. It is therefore vital to include specific screening for mycoplasma in any contamination control strategy. Modern detection methods such as polymerase chain reaction (PCR) assays have proven to be far more sensitive and rapid for mycoplasma detection than traditional culture or biochemical tests<span class="citation">(Molla Kazemiha et al. 2014)</span>. For example, in one comparison study PCR could detect mycoplasma in ~57.5% of contaminated cell line samples, whereas an enzyme-based method detected 52.5% and culture only 40% – underscoring PCR’s superior sensitivity<span class="citation">(Molla Kazemiha et al. 2014)</span>. Rapid methods like the MycoAlert™ enzymatic kit also outperform classic culture in speed (providing results within 20 minutes) and can serve as a convenient screening tool<span class="citation">(Molla Kazemiha et al. 2014)</span>.</p>
+<p>In summary, <strong>optimizing contamination control strategies</strong> requires a multifaceted approach supported by data from the literature. This includes robust environmental monitoring (with appropriate incubation conditions to capture bacteria and fungi), routine trending of cleanroom flora to detect changes<span class="citation">(Sandle 2011)</span>, strict personnel controls (since humans are a primary contamination source)<span class="citation">(Morandi et al. 2024)</span>, and sensitive detection methods for hard-to-find contaminants like mycoplasmas[<span class="citation">Sandle (2022)</span>]<span class="citation">(Molla Kazemiha et al. 2014)</span>. By integrating these evidence-based practices, one can better ensure the quality and safety of products in a high-grade cleanroom or cell culture environment.</p>
 
 </div>
             </section>
@@ -251,8 +265,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="reproducable-research-part-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="genetrackr.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="relational-databases.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="parameterized-covid.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
